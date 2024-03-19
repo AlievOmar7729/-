@@ -77,14 +77,7 @@ namespace ReportingClassLibrary
             {
                 if (warehouse != null)
                 {
-                    Console.WriteLine("-------------------------------------------------------------------");
-                    Console.WriteLine($"Звіт про залишки на складі:");
-                    Console.WriteLine($"Найменування: {warehouse.Product.Name}");
-                    Console.WriteLine($"Одиниця виміру: {warehouse.Unit}");
-                    Console.WriteLine($"Ціна за одиницю: {warehouse.Product.Price.Amount} {warehouse.Product.Price.Currency.Symbol}");
-                    Console.WriteLine($"Кількість: {warehouse.Quantity}");
-                    Console.WriteLine($"Дата останнього завозу: {warehouse.LastStockDate}");
-                    Console.WriteLine("-------------------------------------------------------------------");
+                    PrintWarehouseInfo(warehouse);
                 }
                 else
                 {
@@ -93,6 +86,18 @@ namespace ReportingClassLibrary
                     Console.WriteLine("-------------------------------------------------------------------");
                 }
             }
+        }
+
+        private void PrintWarehouseInfo(Warehouse warehouse)
+        {
+            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine($"Звіт про залишки на складі:");
+            Console.WriteLine($"Найменування: {warehouse.Product.Name}");
+            Console.WriteLine($"Одиниця виміру: {warehouse.Unit}");
+            Console.WriteLine($"Ціна за одиницю: {warehouse.Product.Price.Amount} {warehouse.Product.Price.Currency.Symbol}");
+            Console.WriteLine($"Кількість: {warehouse.Quantity}");
+            Console.WriteLine($"Дата останнього завозу: {warehouse.LastStockDate}");
+            Console.WriteLine("-------------------------------------------------------------------");
         }
     }
 }
