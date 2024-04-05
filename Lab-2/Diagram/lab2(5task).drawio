@@ -1,0 +1,67 @@
+<mxfile host="Electron" modified="2024-04-05T18:34:35.176Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="1CoVKfy4ugg2QItK2vgI" version="24.1.0" type="device">
+  <diagram name="Страница — 1" id="kjpEhTAzCBMt5MVnjmeF">
+    <mxGraphModel dx="1073" dy="879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;" edge="1" parent="1" source="8GAxVnsLY40BoBIG-ZJ5-1" target="8GAxVnsLY40BoBIG-ZJ5-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-1" value="&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&amp;nbsp;&lt;br&gt;IBuilderCharacter" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="140" y="491" width="200" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-2" value="&lt;div&gt;+ SetHeight(int height) :&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ SetBuild(string build) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ SetHairColor(string hairColor) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ SetEyeColor(string eyeColor) : IBuilderCharacter&lt;/div&gt;&lt;div&gt;+ SetClothing(string clothing) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ SetInventory(string inventory) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ SetGood(bool isGood) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ AddGoodDeed(string deed) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ AddEvilDeed(string deed) : IBuilderCharacter&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ Character Build()&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-1">
+          <mxGeometry y="30" width="200" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;" edge="1" parent="1" source="8GAxVnsLY40BoBIG-ZJ5-4" target="8GAxVnsLY40BoBIG-ZJ5-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-4" value="HeroBuilder" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="882" width="200" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-5" value="character: Character" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-4">
+          <mxGeometry y="25" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-6" value="+HeroBuilder(string)&lt;div&gt;+SetHeight(int)&lt;/div&gt;&lt;div&gt;+SetBuild(string)&lt;/div&gt;&lt;div&gt;+SetHairColor(string)&lt;/div&gt;&lt;div&gt;+SetEyeColor(string)&lt;/div&gt;&lt;div&gt;+SetClothing(string)&lt;/div&gt;&lt;div&gt;+SetInventory(string)&lt;/div&gt;&lt;div&gt;+SetGood(bool)&lt;/div&gt;&lt;div&gt;+AddGoodDeed(string)&lt;/div&gt;&lt;div&gt;+AddEvilDeed(string)&lt;/div&gt;&lt;div&gt;+Build() :&amp;nbsp;Character&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-4">
+          <mxGeometry y="50" width="200" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;" edge="1" parent="1" source="8GAxVnsLY40BoBIG-ZJ5-7" target="8GAxVnsLY40BoBIG-ZJ5-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-7" value="EnemyBuilder" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="882" width="200" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-8" value="character: Character" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-7">
+          <mxGeometry y="25" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-9" value="+HeroBuilder(string)&lt;div&gt;+SetHeight(int)&lt;/div&gt;&lt;div&gt;+SetBuild(string)&lt;/div&gt;&lt;div&gt;+SetHairColor(string)&lt;/div&gt;&lt;div&gt;+SetEyeColor(string)&lt;/div&gt;&lt;div&gt;+SetClothing(string)&lt;/div&gt;&lt;div&gt;+SetInventory(string)&lt;/div&gt;&lt;div&gt;+SetGood(bool)&lt;/div&gt;&lt;div&gt;+AddGoodDeed(string)&lt;/div&gt;&lt;div&gt;+AddEvilDeed(string)&lt;/div&gt;&lt;div&gt;+Build() :&amp;nbsp;Character&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-7">
+          <mxGeometry y="50" width="200" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-12" value="Character" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="120" width="200" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-13" value="+Name : string&lt;div&gt;+Height : int&lt;br&gt;+Build : string&lt;/div&gt;&lt;div&gt;+HairColor : string&lt;br&gt;+EyeColor : string&lt;br&gt;+Clothing : string&lt;br&gt;+Inventory : List&amp;lt;string&amp;gt;&lt;br&gt;+IsGood : bool&lt;br&gt;+GoodDeeds : List&amp;lt;string&amp;gt;&lt;br&gt;+EvilDeeds : List&amp;lt;string&amp;gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-12">
+          <mxGeometry y="20" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-14" value="+ShowDetails()&lt;div&gt;-DisplayInventory(List&amp;lt;string&amp;gt; inventory)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-12">
+          <mxGeometry y="210" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;" edge="1" parent="1" source="8GAxVnsLY40BoBIG-ZJ5-16" target="8GAxVnsLY40BoBIG-ZJ5-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-16" value="CharacterDirector" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="410" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-17" value="-&amp;nbsp;_builder :&amp;nbsp;IBuilderCharacter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-16">
+          <mxGeometry y="20" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-18" value="CreateCharacter() :&amp;nbsp;Character" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="8GAxVnsLY40BoBIG-ZJ5-16">
+          <mxGeometry y="80" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8GAxVnsLY40BoBIG-ZJ5-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;exitX=0.004;exitY=0.856;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.996;entryY=0.42;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8GAxVnsLY40BoBIG-ZJ5-17" target="8GAxVnsLY40BoBIG-ZJ5-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

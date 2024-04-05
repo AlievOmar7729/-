@@ -1,0 +1,44 @@
+<mxfile host="Electron" modified="2024-04-02T13:35:01.287Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="wrOFTo5Qnk4yxvov2RaJ" version="24.1.0" type="device">
+  <diagram name="Страница — 1" id="gQZKZNHnzJBY1dW_KItz">
+    <mxGraphModel dx="450" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-1" value="Authenticator" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="230" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-3" value="-Authenticator()&lt;br&gt;+GeInstance() :&amp;nbsp;&lt;span style=&quot;font-weight: 700;&quot;&gt;Authenticator&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HleRkLcmR6Gh0dFrhlb7-1">
+          <mxGeometry y="70" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-2" value="-instance: Singleton" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HleRkLcmR6Gh0dFrhlb7-1">
+          <mxGeometry y="20" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="HleRkLcmR6Gh0dFrhlb7-1" source="HleRkLcmR6Gh0dFrhlb7-2" target="HleRkLcmR6Gh0dFrhlb7-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="-50" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="40" />
+              <mxPoint x="230" y="40" />
+              <mxPoint x="230" y="-50" />
+              <mxPoint x="100" y="-50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-5" value="Program" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="10" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-6" value="user1 : AunAuthenticator.GetInstance()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HleRkLcmR6Gh0dFrhlb7-5">
+          <mxGeometry y="20" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HleRkLcmR6Gh0dFrhlb7-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HleRkLcmR6Gh0dFrhlb7-6" target="HleRkLcmR6Gh0dFrhlb7-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="130" />
+              <mxPoint x="230" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
