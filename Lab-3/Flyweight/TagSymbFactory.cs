@@ -9,7 +9,7 @@ namespace Flyweight
     public class TagSymbFactory
     {
         private static Dictionary<string, TagSymb> Tags = new Dictionary<string, TagSymb>();
-        public static TagSymb getTag(string name, string displayType, bool closingtype)
+        public static TagSymb GetTag(string name, string displayType, bool closingtype)
         {
             var tagSymb = Tags.GetValueOrDefault(name);
             if (tagSymb == null)

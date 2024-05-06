@@ -16,7 +16,7 @@ namespace Flyweight
         public LightElementNodeFlyweight(string tag,string displayType,bool closingType)
         {
             CssClasses = new List<string>();
-            tagSymb = TagSymbFactory.getTag(tag, displayType, closingType);
+            tagSymb = TagSymbFactory.GetTag(tag, displayType, closingType);
         }
         public void AddChildren(ILightNode node)
         {
