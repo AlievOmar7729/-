@@ -45,8 +45,12 @@ namespace HTML.Iterators
 
         public object? Next()
         {
-
-            return this.IsDone() ? null : Current();
+            if (IsDone())
+            {
+                return null;
+            }
+            _cursor++;
+            return Current();
         }
 
         public void Reset()

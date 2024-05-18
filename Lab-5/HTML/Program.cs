@@ -8,6 +8,7 @@ LightElementNode div = new LightElementNode()
     CssClasses = new List<string> { "Menu" }
 
 };
+
 div.AddChildren(new LightTextNode("Home"));
 div.AddChildren(new LightTextNode("AboutMe"));
 div.AddChildren(new LightTextNode("contacts"));
