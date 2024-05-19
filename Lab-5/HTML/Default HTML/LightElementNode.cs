@@ -1,4 +1,5 @@
 ﻿using HTML.Iterators;
+using HTML.State;
 using System;
 using System.Collections.Generic;
 using System.Formats.Asn1;
@@ -15,6 +16,16 @@ namespace Deafault
         public string DisplayType { get; set; }
         public bool ClosingType { get; set; }
         public List<string> CssClasses { get; set; }
+        private IState _state;
+        public IState State
+        {
+            get { return _state; }
+            set
+            {
+                _state = value;
+                _state.Handle(this);
+            }
+        }
 
         public LightElementNode()
         {
@@ -23,6 +34,8 @@ namespace Deafault
             Tag = "div";
             DisplayType = "block";
             ClosingType = true;
+
+            _state = new NormalState();
         }
 
 
@@ -67,5 +80,14 @@ namespace Deafault
         public IIterator GetDepthIterator() => new DepthIterator(this);
 
         public IIterator GetBreadIterator() => new BreadthIterator(this);
+
+        public void OnMouseOver()
+        {
+            State = new HoverState();
+        }
+        public void OnMouseOut()
+        {
+            State = new NormalState();
+        }
     }
 }
