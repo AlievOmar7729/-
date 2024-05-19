@@ -1,5 +1,6 @@
 ﻿using HTML.Iterators;
 using HTML.State;
+using HTML.Template_Method;
 using System;
 using System.Collections.Generic;
 using System.Formats.Asn1;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Deafault
 {
-    public class LightElementNode : ILightNode, IAggregate
+    public class LightElementNode : LightNodeBase ,ILightNode, IAggregate 
     {
         protected List<ILightNode> _children = new List<ILightNode>();
         public string Tag { get; set; }
@@ -49,14 +50,14 @@ namespace Deafault
             _children.Remove(node);
         }
 
-        public void innerHTML()
+        public override void innerHTML()
         {
             foreach (var node in _children)
             {
                 node.outerHTML();
             }
         }
-        public void outerHTML()
+        public override void outerHTML()
         {
             if (CssClasses.Count == 0)
             {
@@ -89,5 +90,18 @@ namespace Deafault
         {
             State = new NormalState();
         }
+
+
+
+        protected override void OnCreated() => Console.WriteLine($"{Tag} element created.");
+
+
+
+        protected override void OnInserted() => Console.WriteLine($"{Tag} element inserted into the DOM.");
+        protected override void OnRemoved() => Console.WriteLine($"{Tag} element removed from the DOM.");
+        protected override void ApplyStyles() => Console.WriteLine($"Styles applied to {Tag} element.");
+        protected override void ApplyClassList() => Console.WriteLine($"Class list applied to {Tag} element: {string.Join(", ", CssClasses)}");
+        protected override void RenderText() => Console.WriteLine($"Text rendered inside {Tag} element.");
+
     }
 }
