@@ -75,9 +75,9 @@ Console.WriteLine("-------UNDO------------");
 invoker.Undo();
 div1.outerHTML();*/
 
-//state
+//state, template method
 
-/*LightElementNode div1 = new LightElementNode()
+LightElementNode div1 = new LightElementNode()
 {
     Tag = "div",
     DisplayType = "block",
@@ -112,5 +112,6 @@ div1.outerHTML();
 Console.WriteLine("\nHTML after mouse out:");
 p1.OnMouseOut();
 div1.outerHTML();
-*/
+text.Render();
+
 
