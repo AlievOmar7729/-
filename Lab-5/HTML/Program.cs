@@ -1,4 +1,5 @@
 ﻿using Deafault;
+using HTML.Command;
 
 LightElementNode div = new LightElementNode()
 {
@@ -23,7 +24,9 @@ p.AddChildren(new LightTextNode("Omar Aliev IPZ-22-1"));
 div.outerHTML();
 div.RemoveChildren(p);
 
-var dfi = div.GetDepthIterator();
+
+//iterator
+/*var dfi = div.GetDepthIterator();
 while (!dfi.IsDone())
 {
     Console.WriteLine("/////////////////");
@@ -39,4 +42,37 @@ while (!bfi.IsDone())
     Console.WriteLine("/////////////////");
     ILightNode node = (ILightNode)bfi.Next();
     node.outerHTML();
-}
+}*/
+
+//command
+LightElementNode div1 = new LightElementNode()
+{
+    Tag = "div",
+    DisplayType = "block",
+    ClosingType = true,
+    CssClasses = new List<string> { "Menu" }
+};
+LightElementNode p1 = new LightElementNode()
+{
+    Tag = "p",
+    DisplayType = "block",
+    ClosingType = true,
+};
+LightTextNode text = new LightTextNode("Omar Aliev IPZ-22-1");
+
+var addBlockCommand = new AddNodeCommand(div1, p1);
+var addTextCommand = new AddNodeCommand(div1, text);
+
+var invoker = new CommandInvoker();
+
+invoker.ExecuteCommand(addBlockCommand);
+invoker.ExecuteCommand(addTextCommand);
+
+div1.outerHTML();
+
+Console.WriteLine("-------UNDO------------");
+invoker.Undo();
+div1.outerHTML();
+
+
+
