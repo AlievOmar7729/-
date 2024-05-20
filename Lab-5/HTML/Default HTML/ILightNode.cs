@@ -1,6 +1,8 @@
-﻿using System;
+﻿using HTML.Visitor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,5 +12,7 @@ namespace Deafault
     {
         public void outerHTML();
         public void innerHTML();
+
+        void Accept(ILightNodeVisitor visitor);
     }
 }

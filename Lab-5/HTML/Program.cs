@@ -1,6 +1,7 @@
 ﻿using Deafault;
 using HTML.Command;
 using HTML.State;
+using HTML.Visitor;
 
 LightElementNode div = new LightElementNode()
 {
@@ -77,7 +78,7 @@ div1.outerHTML();*/
 
 //state, template method
 
-LightElementNode div1 = new LightElementNode()
+/*LightElementNode div1 = new LightElementNode()
 {
     Tag = "div",
     DisplayType = "block",
@@ -112,6 +113,44 @@ div1.outerHTML();
 Console.WriteLine("\nHTML after mouse out:");
 p1.OnMouseOut();
 div1.outerHTML();
-text.Render();
+text.Render();*/
 
+
+//visitor
+
+LightElementNode div1 = new LightElementNode()
+{
+    Tag = "div",
+    DisplayType = "block",
+    ClosingType = true,
+    CssClasses = new List<string> { "Menu" }
+};
+LightElementNode p1 = new LightElementNode()
+{
+    Tag = "p",
+    DisplayType = "block",
+    ClosingType = true,
+};
+LightElementNode p2 = new LightElementNode()
+{
+    Tag = "p",
+    DisplayType = "block",
+    ClosingType = true,
+};
+LightTextNode text = new LightTextNode("Omar Aliev IPZ-22-1");
+
+var addBlockCommand = new AddNodeCommand(div1, p1);
+var addTextCommand = new AddNodeCommand(div1, text);
+
+var invoker = new CommandInvoker();
+
+invoker.ExecuteCommand(addBlockCommand);
+invoker.ExecuteCommand(addTextCommand);
+invoker.ExecuteCommand(addTextCommand);
+
+var elementCountVisitor = new ElementCountVisitor();
+div1.Accept(elementCountVisitor);
+div1.outerHTML();
+Console.WriteLine($"\nTotal elements: {elementCountVisitor.ElementCount}");
+Console.WriteLine($"Total text nodes: {elementCountVisitor.TextCount}");
 

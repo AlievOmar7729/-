@@ -1,4 +1,5 @@
 ﻿using Deafault;
+using HTML.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,7 @@ namespace HTML.Template_Method
 
         public abstract void outerHTML();
         public abstract void innerHTML();
+
+        public abstract void Accept(ILightNodeVisitor visitor);
     }
 }
