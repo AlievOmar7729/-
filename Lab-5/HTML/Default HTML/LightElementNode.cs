@@ -1,6 +1,7 @@
 ﻿using HTML.Iterators;
 using HTML.State;
 using HTML.Template_Method;
+using HTML.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Formats.Asn1;
@@ -103,5 +104,13 @@ namespace Deafault
         protected override void ApplyClassList() => Console.WriteLine($"Class list applied to {Tag} element: {string.Join(", ", CssClasses)}");
         protected override void RenderText() => Console.WriteLine($"Text rendered inside {Tag} element.");
 
+        public override void Accept(ILightNodeVisitor visitor)
+        {
+            visitor.Visit(this);
+            foreach (var child in _children)
+            {
+                child.Accept(visitor);
+            }
+        }
     }
 }

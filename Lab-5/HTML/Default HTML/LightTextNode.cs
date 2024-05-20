@@ -1,4 +1,5 @@
 ﻿using HTML.Template_Method;
+using HTML.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,5 +34,9 @@ namespace Deafault
         protected override void OnRemoved() => Console.WriteLine($"Text node removed from the DOM with text: {text}");
         protected override void RenderText() => Console.WriteLine($"Text rendered: {text}");
 
+        public override void Accept(ILightNodeVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
     }
 }
